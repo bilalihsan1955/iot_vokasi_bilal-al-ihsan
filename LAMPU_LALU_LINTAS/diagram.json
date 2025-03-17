@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "Bilal Al Ihsan",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 19.2, "left": -81.56, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": 6, "left": 119, "attrs": { "color": "green" } },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -13.2,
+      "left": 80.6,
+      "attrs": { "color": "yellow" }
+    },
+    { "type": "wokwi-led", "id": "led3", "top": -42, "left": 42.2, "attrs": { "color": "red" } }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "led3:C", "esp:GND.2", "black", [ "v0" ] ],
+    [ "led2:C", "esp:GND.2", "black", [ "v0" ] ],
+    [ "led1:C", "esp:GND.2", "black", [ "v0" ] ],
+    [ "led3:A", "esp:18", "red", [ "v0" ] ],
+    [ "led2:A", "esp:17", "yellow", [ "v0" ] ],
+    [ "led1:A", "esp:4", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
