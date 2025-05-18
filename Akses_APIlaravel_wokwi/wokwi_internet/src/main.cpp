@@ -22,13 +22,13 @@ void setup()
 
   // Hubungkan ke WiFi
   WiFi.begin(ssid, password);
-  Serial.print("Menghubungkan ke WiFi");
+  Serial.print("Menghubungkan ke WiFi saya");
   while (WiFi.status() != WL_CONNECTED)
   {
     delay(500);
     Serial.print(".");
   }
-  Serial.println(" Terhubung!");
+  Serial.println(" Terhubung1!");
 
   dht.begin();
 
@@ -61,7 +61,7 @@ void loop()
 
     // Inisialisasi HTTPClient
     HTTPClient http;
-    String url = "http://d87a-125-166-0-182.ngrok-free.app/api/posts"; // Ganti dengan URL ngrok yang benar
+    String url = "http://2a78-180-248-31-104.ngrok-free.app/api/posts"; // Ganti dengan URL ngrok yang benar
 
     http.begin(url); // Menggunakan HTTP, bukan HTTPS
     http.addHeader("Content-Type", "application/json");
